@@ -1,6 +1,6 @@
 
 convert_and_copy(){
-  local abs_path=$(realpath $1)
+  local abs_path=$(realpath "$1")
   local win_path=$(echo "$abs_path" | sed "s|/mnt/||" | sed "s|/|:|1")
   win_path=$(echo "$win_path" | tr '/' '\\\\')
 
